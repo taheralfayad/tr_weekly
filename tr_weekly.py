@@ -2,7 +2,7 @@ import os
 import subprocess
 import time
 
-process = subprocess.run(['whisper', 'tr_weekly.m4a', '--model', 'medium.en'], stdout=subprocess.PIPE, text=True)
+process = subprocess.run(['whisper', 'tr_weekly.mp4', '--model', 'medium.en'], stdout=subprocess.PIPE, text=True)
 
 time.sleep(5)
 
@@ -11,60 +11,34 @@ with open("tr_weekly.txt", "r") as file:
 
 
 format = """
-:pighappy:TR WEEKLY: :pighappy:
+:pighappy: TR WEEKLY: :pighappy:
 :trumpet: ANNOUNCEMENTS :trumpet:
-Hackday Next week!
-Kickoff at 10AM monday
-Final decisions for new techrangers next week
-Pancake breakfast 8:30-10:30AM on Wednesday
-Final round for System Engineer II position next week
-Soccer game today at 6
-Fill out the climate survey
-Due the 21st
+*Insert a summary of all of the announcements here in bullet point format.
 :bar_chart:Performance Insights:
-Email went out to say it is getting retired August 9th
+*Insert everything related to performance insights here in bullet point format.
 :techrangers-wave:TR Outreach:
-No updates
+*Insert a summary of all of the TR outreach here in bullet point format.
 :female_vampire:Vampire:
-temporary on hold.
+*Insert a summary of all of the Vampire related content here in bullet point format.
 :closed_book:Course Dev & Pressbooks:
-Still working on bio book conversion
-Some tickets for fall starting to come in
+*Insert a summary of all of the Course Dev & Pressbooks content here in bullet point format.
 :materia: Materia: :peario:
-Working on accessibility stuff
-Corey is reviewing PRs from Cay and Brandon
+*Insert a summary of all of the Materia related content here in bullet point format.
 :obojobo:OBOJOBO:
-Morgan finished course based assessment stats
-Viggie working on new border options
+*Insert a summary of all of the Obojobo related content here in bullet point format.
 :spider_web: WORDPRESS:
-Made change to prod with no issues
-Websites are not accessible off campus/VPN
-Related to UCF IT
+*Insert a summary of all of the Wordpress related content here in bullet point format.
 :apcfrog: Captioning :frog::
-Rev budget has been stabilized
-Worked on integrating automated captions (robocaptioning)
-I (Evan) have been writing tests for captionhub and working on lti issues with ableplayer
+*Insert a summary of all of the Captioning related content here in bullet point format.
 :quality:Quality Badges:
-No updates
+*Insert a summary of all of the Quality Badges related content here in bullet point format.
 :udoit:UDOIT:
-Taher working on PHP Ally stuff
-Danny reviewing issues wth PRs
-Possibly related to JWT stuff
+*Insert a summary of all of the UDOIT related content here in bullet point format.
 :party-patch:Soulpatch:
-Was down until late yesterday
-Certificate for SSO expired, should be working now
-No new development work
+*Insert a summary of all of the Materia related content here in bullet point format.
 :canvas: LTI 1.3 Conversion:
-Templater is running on EC2
-Matt finished dev and prod dbs
-Will be testing with syntax highlighter later
-Me (Evan) and Danny working on LTI issues related to JWT from url
+*Insert a summary of all of the LTI 1.3 Conversion related content here in bullet point format.
 :ucfhere: UCF Here :ucfhere::
-Emmanuel worked with Morgan on AWS/Docker configurations
-:jack_o_lantern:THE PUMPKIN: If you were locked in a time machine set for a single one-way trip to the past or future and had 10 minutes to dial in the time and place, when and where would you go? Why?
-Danny G - Go back an hour before to have more time to think how to use time machine
-Danny M - Back in time to see dinosaurs as long as it's safe
-Jacob - Late 80s computer shows
-Me (Evan) - Go back 10 years and bet on sports games """
-
-print(format)
+*Insert a summary of all of the UCFhere related content here in bullet point format.
+:jack_o_lantern:THE PUMPKIN: *Insert the pumpkin question here.
+*Insert all of the answers to the pumpkin question here """
