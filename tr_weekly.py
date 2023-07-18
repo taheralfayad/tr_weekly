@@ -1,13 +1,11 @@
-import os
-import subprocess
-import time
+import whisper
 
-process = subprocess.run(['whisper', 'tr_weekly.mp4', '--model', 'medium.en'], stdout=subprocess.PIPE, text=True)
+# Load base english only model and transcribe
+model = whisper.load_model("base.en")
+result = model.transcribe("recording.mp4")
+transcript = result["text"]
 
-time.sleep(5)
-
-with open("tr_weekly.txt", "r") as file:
-    data = file.read()
+print(transcript)
 
 
 format = """
