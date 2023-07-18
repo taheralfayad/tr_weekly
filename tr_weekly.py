@@ -1,42 +1,41 @@
 import whisper
+import openai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+def main():
+    transcript = transcribe('recording.mp4')
+    res = summarize(transcript)
 
 # Load base english only model and transcribe
-model = whisper.load_model("base.en")
-result = model.transcribe("recording.mp4")
-transcript = result["text"]
+def transcribe(recording):
+    model = whisper.load_model("base.en")
+    result = model.transcribe(recording)
 
-print(transcript)
+    return result["text"]
 
+def summarize(transcript):
 
-format = """
-:pighappy: TR WEEKLY: :pighappy:
-:trumpet: ANNOUNCEMENTS :trumpet:
-*Insert a summary of all of the announcements here in bullet point format.
-:bar_chart:Performance Insights:
-*Insert everything related to performance insights here in bullet point format.
-:techrangers-wave:TR Outreach:
-*Insert a summary of all of the TR outreach here in bullet point format.
-:female_vampire:Vampire:
-*Insert a summary of all of the Vampire related content here in bullet point format.
-:closed_book:Course Dev & Pressbooks:
-*Insert a summary of all of the Course Dev & Pressbooks content here in bullet point format.
-:materia: Materia: :peario:
-*Insert a summary of all of the Materia related content here in bullet point format.
-:obojobo:OBOJOBO:
-*Insert a summary of all of the Obojobo related content here in bullet point format.
-:spider_web: WORDPRESS:
-*Insert a summary of all of the Wordpress related content here in bullet point format.
-:apcfrog: Captioning :frog::
-*Insert a summary of all of the Captioning related content here in bullet point format.
-:quality:Quality Badges:
-*Insert a summary of all of the Quality Badges related content here in bullet point format.
-:udoit:UDOIT:
-*Insert a summary of all of the UDOIT related content here in bullet point format.
-:party-patch:Soulpatch:
-*Insert a summary of all of the Materia related content here in bullet point format.
-:canvas: LTI 1.3 Conversion:
-*Insert a summary of all of the LTI 1.3 Conversion related content here in bullet point format.
-:ucfhere: UCF Here :ucfhere::
-*Insert a summary of all of the UCFhere related content here in bullet point format.
-:jack_o_lantern:THE PUMPKIN: *Insert the pumpkin question here.
-*Insert all of the answers to the pumpkin question here """
+    # Grab system prompt from system.txt
+    with open('system.txt') as f:
+        system_prompt = f.read()
+
+    print(system_prompt)
+
+    # response = openai.ChatCompletion.create(   
+    #     model="gpt-3.5-turbo",
+    #     messages=[
+    #             {"role": "system", "content": system_prompt},
+    #             {"role": "user", "content": "Who won the world series in 2020?"},
+    #             {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
+    #             {"role": "user", "content": "Where was it played?"}
+    #         ]
+    #     )
+    # return response
+
+if __name__ == "__main__":
+    main()
