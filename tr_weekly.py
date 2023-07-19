@@ -1,6 +1,7 @@
 import whisper
 import openai
 import os
+from scribe import send_notes
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,6 +13,7 @@ def main():
     res = summarize(transcript)
     with open('result.txt', 'w') as file:
         file.write(res)
+    send_notes(res)
 
 # Load medium english only model and transcribe
 def transcribe(recording):
