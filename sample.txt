@@ -1,0 +1,182 @@
+I know I was very excited to do the chili cook off and that was a great experience. Congrats again to Carlos for tying for first place for the spicy category.
+And congrats to Morgan for winning the trivia, the Kahoot trivia thing yesterday.
+So we're, you know, LS&T is representing.
+So we do have another week of Rejuvenate next week. It's also Hack Day next week. So 10 a.m. on Monday is the Hack Day kickoff.
+I don't know, Carlos, did you want to? We haven't talked about it. Did you want to emcee that or do you want me to do that?
+OK, well, I'll be on standby if for some reason you can't. Yeah. And I am sorry, that does overlap with the Obajobo cohort meeting. Brandon, sorry.
+We'll be meeting on Monday at 11 to figure out the final decision for hiring for Tech Rangers, although one of the candidates this afternoon is sick today, so they won't be able to interview today.
+So I haven't heard back from them about whether they want to reschedule to Monday or not. So I may have to move the final decision time based off of when that last interview happens.
+Or we can just make decisions without that interview and then figure it out from there.
+The fact that they didn't even offer to like or they didn't even ask for an alternate time was kind of weird. They're just like, I can't make it today. Period.
+Like I was like, do you not want the job? You got to put in a little. Oh, yeah. Thank you for starting the recording, Brandon.
+All right. So, yeah, Hack Day is next week. Be sure you block off eight hours to work on your project.
+If you have an idea for a project, please post it in the project ideas channel or tab in the Hack Day channel for this semester.
+Just nice to get that get that information in there, have some record of of what was what people are thinking about.
+And it might, you know, spark an idea and somebody else that they can noodle on a little bit more over the weekend before the kickoff on Monday.
+Let's see here. The pancake breakfast is Wednesday the 19th. So this coming Wednesday at starting at 830 a.m.
+But it does go until 1030 a.m. So if you would like to be served pancakes by the leadership of DDL, including Francesca, then I highly recommend you do that.
+I remember one of my fondest memories of being a student at UCF was being served ice cream by President Hitt.
+It was it was very nice for him to him to do something directly for me.
+So. Let's see, we're doing our second round interviews for the systems engineer to position next week as well.
+I have invited Kay and Vicky to be a part of those, and that wasn't because I wanted to exclude anyone or whatever.
+It's it was mainly based on schedules. I just looked at who who was available during those times and and and yeah, that's that's why.
+So sorry if you if you if I didn't pick you for that, I'll choose you for another time if we if we hire somebody again later.
+I'm looking at other things on my calendar.
+I don't think I have anything else. Anybody else have any news or updates to share?
+Yes.
+Soccer game today, I think around the same time as we did it last time, so maybe around 6 p.m., whoever wants to join is more than welcome to the more the merrier.
+So so we do have an interview going until five fifty p.m. today.
+So sorry if you wanted to be part of the soccer game and also that interview, it's going to be a little tight.
+I suppose you could always just watch the recording later. That's fine.
+But I will not be there today. Still still don't want to get this too sweaty or hurt it.
+Yeah, but thanks. Thank you for bringing that up. Anything else? Any other news for the team?
+No. All right. Let's go to the climate survey. Fill that out if you have them. I think that goes to both full timers and part timers. I think so.
+I think it's due on the twenty first.
+Yeah, I started filling that out this morning and then it was there was a question of describe your proudest or most memorable moment working at UCF.
+And I'm like, oh, man, I'm going to need a little bit.
+All right. Let's go to projects.
+I'm going to start with the performance insights retirement to get that one on the board here.
+I did send out the email to faculty last week.
+That may have been on or was it earlier this week? Whatever the email went out to faculty telling them that performance insights is going away on August 9th.
+And I haven't actually checked the LST inbox today to see if there's any responses from that.
+No, nobody's complaining. So that's good. At least not directly to us.
+The let's move on to to our outreach. Any updates?
+No, no. This is last week. That's changed.
+So for course seven press books, press books, they're working on the bio conversion like they're full force into that.
+Course dev Kylie's compiling a lot a lot of ServiceNow data for reports for Francisca.
+And I do know that we're starting to get some some tickets for the fall in there as well, including one for a noncredit course, which is interesting.
+Let's go on to Materia.
+So lots of accessibility stuff this week. We met with Christina yesterday, whose title deputy coordinator for the university.
+Got it. Something like that. Boom. There we go. Always look like 20 times we met with her.
+And that was really lightning validated. Some of the design decisions we've been making as far as adapting accessibility standards to like really weird interfaces that sort of break conventions.
+So, yeah, I've been reviewing pull requests for accessibility changes that Kay and Brandon have been making to some of the existing widgets.
+Kay's primarily been working on flashcards, reviewing some stuff that I did for crossword, some of the other widgets.
+Simon's been working on guess the phrase updates. Jaden's been working on word search. That's it.
+Sweet. All right.
+Not a whole lot different from last week. Morgan has finished his course based assessment stats feature after reviewed it at some point.
+He's been working on adding additional border options to the new excerpt component.
+And I have been working on accessibility updates to material, which is so I haven't really been doing much at all.
+But that's all we got. All right.
+WordPress. Danny, do you want to do that?
+So last week, I believe we made the we made a push to prod is change the websites that we currently have.
+No issues there. And then this morning or afternoon rather there.
+Well, currently the websites actually haven't checked in the last few minutes here.
+I'm still connected to VPN. Currently, the websites are inaccessible off campus or off VPN because of presumably something UCF IT did.
+They had to restart some of their domain controllers for updates.
+And this corresponds to that action. So we don't know if it's a correlation or a cause.
+So they're looking into it. Let's go to captioning.
+Yeah, the the budget has been stabilized enough and new orders have been made.
+We're also considering using auto captioning as opposed to actual humans captioning for to get a sense on how and how that'll how that'll work for non-essential video requests.
+Evan's been working on getting tests for auto captioner and working with Danny G on LTI issues, which are probably linked to canvas dot dev.
+Not working easily with that. And to use Web courses test.
+And that's about it for captioning.
+OK.
+Quality badges. No updates.
+You do it. I know Tahir's working on a color contrast issue right now trying to change.
+Well, it's actually not you do it. It's PHP Ally. But you do it's the only user of PHP Ally.
+So any others? Anything more specific to hear?
+No. OK.
+And Danny, weren't you working on something for you do it as well? Yeah, it also had to do with contrast.
+I want to check like Tahir are you working like the most recent issue? The transparency one?
+Yeah. Or is it a different one? Oh, fuck. OK.
+We had to talk about that. I also have some issues with that. I don't know if I'm hitting a block.
+Did you get to the PHP Ally part? No, I don't think so.
+I'll chat you up later. But yeah, I've been working on that, too.
+And I checked some PRs and I found an issue where you do it.
+Three instances are not working anymore. Excuse me. Anymore. So I'm not sure what that's about.
+I need to check later. That's about it. Like.
+Not working where? Like in some of the most recent PRs that used to work.
+OK. And now I don't know if my I guess like my local setup made it different.
+So I need either one of you to think it could be that JWT thing that we were having trouble with as well.
+Yeah. OK. I regarded that, but I'm not sure if that's the case.
+All right. Yeah. Take a look at it.
+Let's go to soul patch. Anything to report? Oh, yeah. There's something to report.
+Yeah, that was a fun week for soul patch. It was down until like late yesterday.
+So I had to. It turns out our our certificate for a single sign on expired.
+So that was fun. But we ended up replacing it and we're good now.
+Some users were given temporary direct access to soul patch, but that has since been revoked.
+Everything should be back to normal. So if there's any problems, let me know. OK.
+I guess that means I need to make an update in the announcements channel about that.
+I knew I was forgetting to do something. OK.
+At least email the people directly who asked.
+I'm going to do that right now, so I don't forget.
+Yeah. Other than some major weird outages, no development work done on soul patch this week.
+Cool. All right. LTI one point three conversion.
+So we've got what Carlos mentioned about able player.
+I've been working on with Evan template is now also up and running on easy to using the old generate key script.
+So that's all will need to be changed over once we get the databases.
+And I believe Matt said that he now has the product databases, but we're still waiting on a double.
+I have both the dev and product databases. So we have the databases now.
+So I'll be testing that for syntax header today.
+That's for only took two weeks. Yeah. Well, maybe next time it won't take that long because now they know what the process is.
+Yeah, I think the main problem is they just didn't have access, but they should be good now. Yeah.
+All right. UCF here. For UCF here, Jacob, Kylie and I met up for sending e-mails about to faculty and maybe sending e-mails to students about the Android side loading situation and how to go about it.
+When it comes to the server, I met up also with Morgan to help him set up.
+He's also going to help me with a few things in AWS and some Docker files.
+And I'm working on learning and seeing how I can manipulate more Docker users to be able to provide the correct permissions to certain files for certain directories.
+I wish it was faster, but it's a whole build and rebuild and rebuild process.
+So that's the update of UCF here. All right. Yeah. And I did send that e-mail out yesterday, I think. Yeah, yesterday. Cool.
+Are there any other projects that we need to discuss?
+Don't think so. Do we have a pumpkin question?
+Yes.
+If you were locked in a time machine set for a single one way trip to the past or future and had 10 minutes to dial in the time and place, when and where would you go and why?
+I would go to an hour before I got the time machine so I have more time to think about it.
+Yeah, but then you're just going to do that forever.
+Oops. Depends which which model of time travel you subscribe to, I suppose.
+Well, I guess is the question like time loop or can you change your choice the second time?
+That's a really tough one, because I love all of the modern conveniences we have, so it's hard to say I'd want to go to the past.
+But then I also don't know if the future is going to be a hellscape, so I don't know if I want to go to the future.
+The thing about the future is that what if I go so much into the future that I become the caveman in present time?
+You should be so lucky.
+Right, you're like you're like bringing diseases to the future that they've eradicated or something like or you get sick from some super disease that they've created from all of their immunities or whatever.
+So or either I die or I killed the future.
+There's going to be a problem no matter what.
+So the real question is, if it's a one way trip, can I bring any friends?
+Well, I'm glad you asked that, because there's also a follow up to this question.
+What if it were to be a round trip that would include friends and family? It could bring along for a week and safely return.
+I'll safely return prior to the back in time to see some dinosaurs.
+The full Jurassic Park.
+I mean, if it's guaranteed a safe return, then for sure.
+I mean, it might depend on whether the return trip is safe or just the entire thing is the entire trip.
+Are we assuming the entire trip or just the thing is safe? But when you get there, you're on your own, you know?
+Oh, Lord.
+I think.
+I would go to I'm not sure if it if it was called CES back then or if it was a different different name or something, but I would love to go to one of the computer shows in California or Vegas or whatever in the 80s.
+Like, I think that would be pretty wild, like late 80s when when it was like every computer was new and and different.
+And, you know, people were just going insane with with all the new technology and how quickly it was it was going.
+Yeah, I think that'd be pretty fun.
+What you should do is like whisper to the guy next to you like, you know, they got this on iPhones now.
+He's like, what? What's an iPhone like? Is it in your eye?
+And how do you fit a telephone in your eye? That's crazy.
+And then just show him the block you have on your on your.
+Yeah, I would you can't you couldn't take this back with you. You would definitely contaminate the timeline.
+You can't take that kind of risk.
+But what if you went back and there was a Wi-Fi signal?
+No.
+I think that's been a writing prompt like a million times, like you get sent back in time, but you pick up a Wi-Fi signal immediately and it says Merlin's Tower.
+What do you do? I would have to triangulate the position of it and I would go to there.
+Reporting to the FCC. Hey, there's somebody operating in two point four gigahertz.
+They're like, whoa, nothing's there. What? I guess cordless phones might have existed at that time.
+And those were using two point four gigahertz.
+Or you end up military base somewhere and looking up stuff that you probably shouldn't be looking at.
+It's some DARPA project for where they're building Wi-Fi.
+Any other takers?
+I'd probably go back like 10 years and just bet on every sports game. Get rich. Classic great sports almanac.
+Classic. Now, do you have to stay in the same location that you are, but like years back?
+Yes, but it's it's fixed to the astral plane. So you actually just get dropped in the middle of space.
+Well, yeah, I'm I'm I'm all right. I'll stick with the president, but.
+Would it be better to buy a house in 2007 or like as the collapse was happening?
+Definitely once up in 10. I mean, even before that, you could just go back and buy a house in the 50s.
+You're going to go. Like, what's these colorful bills? Get this out of here.
+This is communist money. Just change it all to quarters.
+Buying a house with quarters, that would go over well.
+Yeah, you have to at least go back to like the 30s for that.
+Isn't there a video already about someone buying expensive cars with pennies?
+I mean, probably. Was it in rolls or just like a whole bag of like fatties?
+Like several bags. Yeah, like a wheelbarrow or huge.
+All right. Any other time travel, you know, responses before we break?
+All right. Well, I guess that's it. Anything else before we before we go?
+No. No takers. OK. All right. Well, everybody have a great rest of your day and have a great weekend.
+And we'll if you are in if you're available and you're part of the interviews this afternoon, please pay attention to the team's chat and and jump in.
+We haven't had a problem with having too many people. So just jump in if you're available. So. All right. See you all later.
+See you. Take care.

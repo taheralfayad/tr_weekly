@@ -8,8 +8,11 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def main():
-    transcript = transcribe('recording.mp4')
-    res = summarize(transcript)
+   # transcript = transcribe('recording.mp4')
+
+    res = summarize('thing')
+    with open('result.txt', 'w') as file:
+        file.write(res)
 
 # Load base english only model and transcribe
 def transcribe(recording):
@@ -24,18 +27,20 @@ def summarize(transcript):
     with open('system.txt') as f:
         system_prompt = f.read()
 
+    # Grab sample output
+    with open('sample.txt') as f:
+        sample_txt = f.read()
+    
     print(system_prompt)
 
-    # response = openai.ChatCompletion.create(   
-    #     model="gpt-3.5-turbo",
-    #     messages=[
-    #             {"role": "system", "content": system_prompt},
-    #             {"role": "user", "content": "Who won the world series in 2020?"},
-    #             {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
-    #             {"role": "user", "content": "Where was it played?"}
-    #         ]
-    #     )
-    # return response
+    response = openai.ChatCompletion.create(   
+        model="gpt-3.5-turbo-16k",
+        messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": sample_txt},
+            ]
+        )
+    return response['choices'][0]['message']['content']
 
 if __name__ == "__main__":
     main()
