@@ -8,9 +8,8 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def main():
-   # transcript = transcribe('recording.mp4')
-
-    res = summarize('thing')
+    transcript = transcribe('recording.mp4')
+    res = summarize(transcript)
     with open('result.txt', 'w') as file:
         file.write(res)
 
@@ -37,7 +36,7 @@ def summarize(transcript):
         model="gpt-3.5-turbo-16k",
         messages=[
                 {"role": "system", "content": system_prompt},
-                {"role": "user", "content": sample_txt},
+                {"role": "user", "content": transcript},
             ]
         )
     return response['choices'][0]['message']['content']
