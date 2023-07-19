@@ -8,14 +8,14 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def main():
-    transcript = transcribe('recording.mp4')
+    transcript = transcribe('tr_weekly.mp4')
     res = summarize(transcript)
     with open('result.txt', 'w') as file:
         file.write(res)
 
-# Load base english only model and transcribe
+# Load medium english only model and transcribe
 def transcribe(recording):
-    model = whisper.load_model("base.en")
+    model = whisper.load_model("medium.en")
     result = model.transcribe(recording)
 
     return result["text"]
