@@ -1,55 +1,45 @@
 import whisper
 import openai
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+def main():
+    transcript = transcribe('recording.mp4')
+    res = summarize(transcript)
+    with open('result.txt', 'w') as file:
+        file.write(res)
+
 # Load base english only model and transcribe
-model = whisper.load_model("medium.en")
-result = model.transcribe("tr_weekly.mp4")
-transcript = result["text"]
+def transcribe(recording):
+    model = whisper.load_model("base.en")
+    result = model.transcribe(recording)
 
-print(transcript)
+    return result["text"]
 
-format = """
-:pighappy: TR WEEKLY: :pighappy:
-:trumpet: ANNOUNCEMENTS :trumpet:
-*Insert a summary of announcements
-:bar_chart:Performance Insights:
-*Insert summary of performance insights
-:techrangers-wave:TR Outreach:
-*Insert summary of TR outreach
-:female_vampire:Vampire:
-*Insert summary of Vampire content
-:closed_book:Course Dev & Pressbooks:
-*Insert summary of Course Dev & Pressbooks
-:materia: Materia: :peario:
-*Insert summary of Materia
-:obojobo:OBOJOBO:
-*Insert summary of Obojobo
-:spider_web: WORDPRESS:
-*Insert summary of Wordpress
-:apcfrog: Captioning :frog::
-*Insert summary of Captioning
-:quality:Quality Badges:
-*Insert summary of Quality Badges
-:udoit:UDOIT:
-*Insert summary of UDOIT
-:party-patch:Soulpatch:
-*Insert summary of Materia
-:canvas: LTI 1.3 Conversion:
-*Insert summary of LTI 1.3 Conversion
-:ucfhere: UCFHere :ucfhere::
-*Insert summary of UCFhere
-:jack_o_lantern:THE PUMPKIN: *Insert pumpkin question.
-*Insert pumpkin question answers """
+def summarize(transcript):
 
-response = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo-16k-0613",
-  messages=[
-        {"role": "user", "content": "Summarize the following text in this format with bullet points." + format},
-        {"role": "user", "content": data}
-    ]
-)
+    # Grab system prompt from system.txt
+    with open('system.txt') as f:
+        system_prompt = f.read()
 
-print(response['choices'][0]['message']['content'])
+    # Grab sample output
+    with open('sample.txt') as f:
+        sample_txt = f.read()
+    
+    print(system_prompt)
+
+    response = openai.ChatCompletion.create(   
+        model="gpt-3.5-turbo-16k",
+        messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": transcript},
+            ]
+        )
+    return response['choices'][0]['message']['content']
+
+if __name__ == "__main__":
+    main()
