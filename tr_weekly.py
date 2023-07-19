@@ -1,20 +1,14 @@
-import os
-import subprocess
-import time
-import openai
-
+import whisper
 from dotenv import load_dotenv
 
 load_dotenv()
 
-process = subprocess.run(['whisper', 'tr_weekly.mp4', '--model', 'medium.en'], stdout=subprocess.PIPE, text=True)
+# Load base english only model and transcribe
+model = whisper.load_model("medium.en")
+result = model.transcribe("tr_weekly.mp4")
+transcript = result["text"]
 
-time.sleep(5)
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-with open("tr_weekly.txt", "r") as file:
-    data = file.read()
+print(transcript)
 
 format = """
 :pighappy: TR WEEKLY: :pighappy:
