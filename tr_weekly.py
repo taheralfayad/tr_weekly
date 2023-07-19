@@ -1,44 +1,60 @@
 import os
 import subprocess
 import time
+import openai
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 process = subprocess.run(['whisper', 'tr_weekly.mp4', '--model', 'medium.en'], stdout=subprocess.PIPE, text=True)
 
 time.sleep(5)
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 with open("tr_weekly.txt", "r") as file:
     data = file.read()
-
 
 format = """
 :pighappy: TR WEEKLY: :pighappy:
 :trumpet: ANNOUNCEMENTS :trumpet:
-*Insert a summary of all of the announcements here in bullet point format.
+*Insert a summary of announcements
 :bar_chart:Performance Insights:
-*Insert everything related to performance insights here in bullet point format.
+*Insert summary of performance insights
 :techrangers-wave:TR Outreach:
-*Insert a summary of all of the TR outreach here in bullet point format.
+*Insert summary of TR outreach
 :female_vampire:Vampire:
-*Insert a summary of all of the Vampire related content here in bullet point format.
+*Insert summary of Vampire content
 :closed_book:Course Dev & Pressbooks:
-*Insert a summary of all of the Course Dev & Pressbooks content here in bullet point format.
+*Insert summary of Course Dev & Pressbooks
 :materia: Materia: :peario:
-*Insert a summary of all of the Materia related content here in bullet point format.
+*Insert summary of Materia
 :obojobo:OBOJOBO:
-*Insert a summary of all of the Obojobo related content here in bullet point format.
+*Insert summary of Obojobo
 :spider_web: WORDPRESS:
-*Insert a summary of all of the Wordpress related content here in bullet point format.
+*Insert summary of Wordpress
 :apcfrog: Captioning :frog::
-*Insert a summary of all of the Captioning related content here in bullet point format.
+*Insert summary of Captioning
 :quality:Quality Badges:
-*Insert a summary of all of the Quality Badges related content here in bullet point format.
+*Insert summary of Quality Badges
 :udoit:UDOIT:
-*Insert a summary of all of the UDOIT related content here in bullet point format.
+*Insert summary of UDOIT
 :party-patch:Soulpatch:
-*Insert a summary of all of the Materia related content here in bullet point format.
+*Insert summary of Materia
 :canvas: LTI 1.3 Conversion:
-*Insert a summary of all of the LTI 1.3 Conversion related content here in bullet point format.
-:ucfhere: UCF Here :ucfhere::
-*Insert a summary of all of the UCFhere related content here in bullet point format.
-:jack_o_lantern:THE PUMPKIN: *Insert the pumpkin question here.
-*Insert all of the answers to the pumpkin question here """
+*Insert summary of LTI 1.3 Conversion
+:ucfhere: UCFHere :ucfhere::
+*Insert summary of UCFhere
+:jack_o_lantern:THE PUMPKIN: *Insert pumpkin question.
+*Insert pumpkin question answers """
+
+response = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo-16k-0613",
+  messages=[
+        {"role": "user", "content": "Summarize the following text in this format with bullet points." + format},
+        {"role": "user", "content": data}
+    ]
+)
+
+print(response['choices'][0]['message']['content'])
