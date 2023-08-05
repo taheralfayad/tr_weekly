@@ -2,6 +2,7 @@ import os
 import json
 import whisper
 import openai
+import sys
 from scribe import send_notes
 from dotenv import load_dotenv
 
@@ -10,7 +11,13 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def main():
-    transcript = transcribe('tr_weekly.mp4')
+    if len(sys.argv) < 2:
+        print("Usage: python tr_weekly.py <video_name.mp4>")
+        return
+    
+    meeting = sys.argv[1]
+
+    transcript = transcribe(meeting)
 
     res = summarize(transcript)
     with open('result.txt', 'w') as file:
